@@ -27,6 +27,15 @@
 
 - Work on indicator visualizations.
 
+## 13/03 - 17/03
+
+- Reproducibility of green area indicator.
+- BarriosSust bug fixes
+
+## 20/03 - 24/03
+
+- Finished BarrioSust app
+
 # Issues
 
 - No MinDes FPS access we need a meet. 
