@@ -12,7 +12,7 @@
 
 ## 13/02 - 17/02
 
-- Work on participation indicator (Geocoding)
+- Work on participation indicator (Geocoding).
 
 ## 20/02 - 24/02
 
@@ -30,14 +30,20 @@
 ## 13/03 - 17/03
 
 - Reproducibility of green area indicator.
-- BarriosSust bug fixes
+- BarriosSust bug fixes.
 
 ## 20/03 - 24/03
 
-- Finished BarrioSust app
+- Finished BarrioSust app.
+- Team meeting feedback.
+
+## 20/03 - 24/03
+
+- Added mean and std for the barrio and the buffer.
+- Legend fixes (added percentaje).
+- Added new barrios.
 
 # Issues
 
 - No MinDes FPS access we need a meet. 
-- I'm waiting for the upload of green areas indicator.
 - No data of educational context and their methodology.
