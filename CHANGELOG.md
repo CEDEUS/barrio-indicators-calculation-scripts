@@ -43,6 +43,10 @@
 - Legend fixes (added percentaje).
 - Added new barrios.
 
+## 27/03 - 31/03
+
+- Added unit counter
+
 # Issues
 
 - No MinDes FPS access we need a meet. 
