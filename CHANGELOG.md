@@ -52,6 +52,6 @@
 - Started modularizing code
 
 # Issues
-
+- What kind of data and what format we can get in the future?
 - No MinDes FPS access we need a meet. 
 - No data of educational context and their methodology.
