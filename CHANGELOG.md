@@ -50,3 +50,11 @@
 ## 03/04 - 07/04
 
 - Started modularizing code
+
+## 10/04 - 14/04
+
+- Started exploring alternatives to add new data
+- Bug hunting & fixing 
+  - Legend Values: The calculation of values was done before on all barrios so they are correct. For leaflet the shape needs to be filtered for perfomance purposes and the legends only shows the calculation over all barrios.
+
+
