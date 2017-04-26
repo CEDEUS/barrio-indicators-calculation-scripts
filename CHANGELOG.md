@@ -57,4 +57,13 @@
 - Bug hunting & fixing 
   - Legend Values: The calculation of values was done before on all barrios so they are correct. For leaflet the shape needs to be filtered for perfomance purposes and the legends only shows the calculation over all barrios.
 
+## 17/04 - 21/04
+
+- Added barrios modelo
+- Added custom legends
+- Publication graphs
+- K-Means Clustering
+- Search for similar projects
+
+
 
