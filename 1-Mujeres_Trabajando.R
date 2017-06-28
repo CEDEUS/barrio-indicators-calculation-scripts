@@ -21,19 +21,25 @@ geoid <- tbl(con,"idgeo") %>%
 #Obteniendo variables desde el servidor y haciendo filter
 #Primero se filtran los casos 1 y 2 condicion laboral trabajando o con trabajo 2 mujer por NVIV y FOLIO
 mujerestrabajando <-tbl(con,"poblacion") %>%
-  select(FOLIO,NVIV,P36,P19) %>% collect(n=Inf) %>% 
+  select(FOLIO,NVIV,P36,P19,P20C) %>% collect(n=Inf) %>% 
   left_join(geoid, by=c("FOLIO"="FOLIO","NVIV"="NVIV")) %>% 
-  filter(P19==2&P36==1|P36==2) %>% 
+  filter(P19==2) %>% 
+  filter(P36==1|P36==2|P36==4) %>% 
+  filter(P20C>=16) %>%
+  filter(P20C<=60) %>% 
   group_by(ID_W) %>% 
   summarize(count = n())
 
-total <- tbl(con,"poblacion") %>% 
-  select(FOLIO,NVIV,P36,P19) %>% 
+totalmujeres <- tbl(con,"poblacion") %>% 
+  select(FOLIO,NVIV,P19,P20C) %>% 
   collect(n=Inf) %>% 
   left_join(geoid, by=c("FOLIO"="FOLIO","NVIV"="NVIV")) %>%
+  filter(P19==2) %>%
+  filter(P20C>=16) %>%
+  filter(P20C<=60) %>% 
   group_by(ID_W) %>%
   summarize(total = n())
 
-final <- left_join(mujerestrabajando, total, by=c("ID_W"="ID_W")) %>% mutate(listo = count/total)
+final <- left_join(mujerestrabajando, totalmujeres, by=c("ID_W"="ID_W")) %>% mutate(listo = count/total)
 #Cleaning
-rm(list=c("geoid","total","mujerestrabajando"))
+rm(list=c("geoid","totalmujeres","mujerestrabajando"))
