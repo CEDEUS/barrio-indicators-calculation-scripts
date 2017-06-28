@@ -1,4 +1,4 @@
-#Numero de personas con acceso a internet / Poblacion total
+#Numero de hogares con acceso a internet / Total hogares
 
 #Conexiones
 library(RMySQL)
