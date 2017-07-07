@@ -65,5 +65,27 @@
 - K-Means Clustering
 - Search for similar projects
 
+## 24/04 - 28/04
 
+- Statistical tests coding (normality, t-test, kruskal, anova)
+
+## 02/05 - 12/05
+
+- Statistical tests over differents types of barrio
+
+## 15/05 - 02/06
+
+- Work on reporting statistical tests (uploaded to rpubs.com)
+
+## 05/06 - 09/06
+
+- New statistical tests over types of barrio and between cities
+
+## 12/06 - 16/06
+
+- Start working on new walkability indicator
+
+## 19/06 - 30/06
+
+- API script coding to retrieve the data of walkability from walkscore
 
