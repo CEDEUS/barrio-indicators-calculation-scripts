@@ -84,8 +84,84 @@
 ## 12/06 - 16/06
 
 - Start working on new walkability indicator
+- Searching for methods
 
 ## 19/06 - 30/06
 
-- API script coding to retrieve the data of walkability from walkscore
+- Extraction of walkability data from walkscore - 10 min - 1.25 m/s for barrios in the platform
+- Extraction of walkability data from walkscore - 15 min - 1.38 m/s for barrios in the platform
 
+## 03/07 - 07/07
+
+- Added data to the visualization (10 min - 1.25 m/s) for the barrios
+- Bugfix in the platform because duplicated manzanas with different values					
+- Tests to search differences in the contexts and cities
+
+## 10/07 - 14/07
+
+- Builded small platform to watch boxplots from the different contexts
+- Started learning about quadtrees - rtrees
+- Searching for a method to join SII data with census data
+
+## 17/07 - 21/07
+
+- First attempts using centroids and trying to get the sii polygon where it falls
+
+## 24/07 - 28/07
+
+- Start analizyng python code to get the way of to do it
+- Start writing script to calculate the appartments by manzana (DPTO,DEPTO,DTO).
+
+## 31/07 - 11/08
+
+- Script to search appartments done but very inaccurate because dirty database
+- Attempt failed, looking for a new method to join SII polygons with census (gDifference, bbox and extent)
+
+## 14/08 - 18/08
+
+- Looking for new barrios using the Wikimapia platform
+- Work on Rodrigo's regexes to get the street names from the mineduc database
+
+## 21/08 - 25/08 
+
+- Extraction of barrios from the Wikimapia platform, troubles getting it out, searching for a method to convert KML to SHP in unix
+- Bash script to convert KML to SHP using ogr2ogr, it downloads the feature from wikimapia using wget and converts the file to shp (tricky script)
+- Extracted new barrios to the platform barrios sustentables: Villa Codelco, Tierra Viva Oriente, Villa Vista Hermosa, El Llano, Barrio San Miguel, Barrio Brasil, Barrio Las Lilas y Barrio Jardin del Este.	
+
+## 28/08 - 08/09
+
+- Added new barrios joining polygons with the prexistent barrios
+- Join with the census polygons
+- Rebuilded indicators: % empleados en la misma comuna, % Mujeres trabajando, % de viviendas de buena calidad, Acceso a tecnologias de la Información, Cercania a areas verdes
+- Created new script to add new barrios (not so easy)
+
+## 11/09 - 15/09
+
+- Updated walkability indicators y new scripts to extract from the OTP platform
+- Bugfix in the platform of barrios sustentables (UTF-8 for spanish characters and adjustements for the new barrios)
+- Looking for new indicators
+
+## 25/09 - 06/10
+
+- Added new barrios: Fundo El Carmen, Barrio Estación, Barrio Amanecer, Lomas de San Sebastian, Villa Los Fundadores, Camilo Henríquez, Parque Krahmer y Sector Regional
+- Extraction from Wikimapia KML to SHP						
+- Join
+- Join with shapes of census
+- Updated indicators
+- Uploaded scripts to GIT
+
+## 09/10 - 20/10
+
+- Sucess looking for a method to use quadtrees in R
+- Created a method using the 4 nearest polygons and selecting the polygon with the largest area
+- Last method now is a function to use it on batch mode
+- Second method using the data from the neighbors and calculating the mean and median
+- Backup of data on the server
+
+## 23/10 - 03/11
+
+- Bug fix in the attempt to join, creation of tests using quadtrees and changed the way of how to do it 
+- Script rewrite to add the largest area of intersection with the sii polygon
+- Year of construction by SII manzana calculated using the median added to polygon and visualized using qgis to test
+- Added indicator to the platform, bug fixing on the visualization to show a new categorical legend
+- Added to GIT
