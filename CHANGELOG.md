@@ -126,7 +126,8 @@
 
 - Extraction of barrios from the Wikimapia platform, troubles getting it out, searching for a method to convert KML to SHP in unix
 - Bash script to convert KML to SHP using ogr2ogr, it downloads the feature from wikimapia using wget and converts the file to shp (tricky script)
-- Extracted new barrios to the platform barrios sustentables: Villa Codelco, Tierra Viva Oriente, Villa Vista Hermosa, El Llano, Barrio San Miguel, Barrio Brasil, Barrio Las Lilas y Barrio Jardin del Este.	
+- Extracted new barrios to the platform barrios sustentables: Villa Codelco, Tierra Viva Oriente, Villa Vista Hermosa, El Llano, Barrio San Miguel, Barrio Brasil, Barrio Las Lilas y Barrio Jardin del Este.
+- Helped Rodrigo with the extraction of ferias libres by municipality from a portal	using a custom script
 
 ## 28/08 - 08/09
 
