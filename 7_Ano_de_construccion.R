@@ -67,6 +67,7 @@ sii.extended <- read_delim("Catastro de Bienes Raices 2016-1/BRORGA2441NL_00000.
 ))
 
 # Converting to numeric
+
 sii.extended$Añodelalineadeconstruccion <- as.numeric(sii.extended$Añodelalineadeconstruccion)
 
 # Creating manzana id
@@ -74,14 +75,17 @@ sii.extended$Añodelalineadeconstruccion <- as.numeric(sii.extended$Añodelaline
 sii.extended$CMN_MZ <- paste0(as.integer(sii.extended$CodigoSIIdelaComuna),"-",as.integer(sii.extended$NumerodeManzana))
 
 # Median of years by manzana
-median.construction.sii <- sii.extended %>% group_by(CMN_MZ) %>% summarise(m=median(Añodelalineadeconstruccion))
+
+median.construction.sii <- sii.extended %>% group_by(CodigoSIIdelaComuna,NumerodeManzana,NumerodePredial,CMN_MZ) %>% slice(which.min(Añodelalineadeconstruccion)) %>% group_by(CMN_MZ) %>% summarise(m=median(Añodelalineadeconstruccion))
 
 barrios_censo@data$yearc <- median.construction.sii[match(barrios_censo@data$CMN_MZ,median.construction.sii$CMN_MZ), ]$m
 
 # Creating shp
+
 writeOGR(barrios_censo,"shape_censo", "shape_censo", driver="ESRI Shapefile")
 
 # Saving indicator
+
 data.w <- barrios_censo@data[ ,c("MANZENT","yearc")]
 names(data.w) <- c("ID_W", "listo")
 data.w<-data.w[!duplicated(data.w), ]
