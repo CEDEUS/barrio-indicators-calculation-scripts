@@ -71,7 +71,7 @@
 
 ## 02/05 - 12/05
 
-- Statistical tests over differents types of barrio
+- Statistical tests over differents types of barrios
 
 ## 15/05 - 02/06
 
@@ -158,6 +158,7 @@
 - Last method now is a function to use it on batch mode
 - Second method using the data from the neighbors and calculating the mean and median
 - Backup of data on the server
+- Learning about walkability using OSMnx and pandana
 
 ## 23/10 - 03/11
 
