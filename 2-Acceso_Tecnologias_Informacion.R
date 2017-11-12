@@ -34,7 +34,7 @@ total <- tbl(con,"hogar") %>%
   summarize(total = n())
 
 final <- left_join(tic, total, by=c("ID_W"="ID_W")) %>% 
-  mutate(listo = count/total)
+  mutate(value = count/total)
 
 #Cleaning
 rm(list=c("total","tic","geoid"))

@@ -88,9 +88,9 @@ writeOGR(barrios_censo,"shape_censo", "shape_censo", driver="ESRI Shapefile")
 
 # Saving indicator
 data.w <- barrios_censo@data[ ,c("MANZENT","value")]
-names(data.w) <- c("ID_W", "listo")
+names(data.w) <- c("ID_W", "value")
 data.w<-data.w[!duplicated(data.w), ]
-data.w$listo <- round(data.w$listo)
+data.w$value <- round(data.w$value)
 write_rds(data.w,"valuesii.RDS")
 
 

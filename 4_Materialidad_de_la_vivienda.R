@@ -34,7 +34,7 @@ imv <- tbl(con, "vivienda") %>%
   left_join(geoid, by=c("FOLIO"="FOLIO","NVIV"="NVIV")) %>%
   mutate(score = materialidad(V03A,V03B,V03C))
 
-final <- imv %>% group_by(ID_W) %>% summarise(listo = mean(score,na.rm = T))
+final <- imv %>% group_by(ID_W) %>% summarise(value = mean(score,na.rm = T))
 
 #Cleaning
 rm(list=c("imv","geoid"))

@@ -34,7 +34,7 @@ final <- apply(table.post, 1, function(x) {
 
 t <-do.call("rbind",setNames(final, NULL))
 
-colnames(t) <- c("ID_W","listo","d")
-t$listo <- as.numeric(as.character(t$listo))
+colnames(t) <- c("ID_W","value","d")
+t$value <- as.numeric(as.character(t$value))
 write_rds(t,"accesibility_score_final_15.RDS")
 

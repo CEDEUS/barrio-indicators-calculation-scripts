@@ -40,6 +40,6 @@ totalmujeres <- tbl(con,"poblacion") %>%
   group_by(ID_W) %>%
   summarize(total = n())
 
-final <- left_join(mujerestrabajando, totalmujeres, by=c("ID_W"="ID_W")) %>% mutate(listo = count/total)
+final <- left_join(mujerestrabajando, totalmujeres, by=c("ID_W"="ID_W")) %>% mutate(value = count/total)
 #Cleaning
 rm(list=c("geoid","totalmujeres","mujerestrabajando"))

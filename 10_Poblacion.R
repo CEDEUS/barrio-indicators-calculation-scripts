@@ -25,7 +25,7 @@ numberpeople <-tbl(con,"poblacion") %>%
   select(FOLIO,NVIV) %>% collect(n=Inf) %>% 
   left_join(geoid, by=c("FOLIO"="FOLIO","NVIV"="NVIV")) %>% 
   group_by(ID_W) %>% 
-  summarize(listo = n())
+  summarize(value = n())
 
   writeRDS(numberpeople,"poblacion.RDS")
 
