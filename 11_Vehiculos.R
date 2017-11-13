@@ -1,4 +1,4 @@
-# Poblacion total
+# Vehiculos
 
 #Conexiones
 library(RMySQL)
@@ -24,5 +24,8 @@ vehiculo <-tbl(con,"hogar") %>%
   left_join(geoid, by=c("FOLIO"="FOLIO","NVIV"="NVIV")) %>% 
   mutate(H13B = dplyr::recode(H13B, `1` = "Si tiene auto", `2` = "No tiene auto", `9` = "Sin respuesta")) %>%
   count(ID_W, H13B) %>%
-  spread(H13B, n, fill=0)
+  spread(H13B, n, fill=0) %>% 
+  mutate(value=(`Si tiene auto`/(`No tiene auto`+`Si tiene auto`))*100)
+
+saveRDS(vehiculo,"vehiculos.RDS")
 
