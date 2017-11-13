@@ -10,6 +10,7 @@ library(readr)
 mz_valdivia.sii <- readOGR(dsn= "MANZANAS_SII/MZ_DR_VALDIVIA/", layer = "MZ_DR_VALDIVIA")
 mz_concepcion.sii <- readOGR(dsn= "MANZANAS_SII/MZ_DR_CONCEPCION/", layer = "MZ_DR_CONCEPCION")
 mz_copiapo.sii <- readOGR(dsn= "MANZANAS_SII/MZ_DR_COPIAPO//", layer = "MZ_DR_COPIAPO")
+mz_laserena.sii <- readOGR(dsn= "MANZANAS_SII/MZ_DR_LA_SERENA/", layer = "MZ_DR_LA_SERENA")
 mz_stgocentro.sii <- readOGR(dsn= "MANZANAS_SII/MZ_DR_STGO_CENTRO/", layer = "MZ_DR_STGO_CENTRO")
 mz_stgooriente.sii <- readOGR(dsn= "MANZANAS_SII/MZ_DR_STGO_ORIENTE/", layer = "MZ_DR_STGO_ORIENTE")
 mz_stgoponiente.sii <- readOGR(dsn= "MANZANAS_SII/MZ_DR_STGO_PONIENTE/", layer = "MZ_DR_STGO_PONIENTE")
@@ -26,11 +27,11 @@ barrios_censo$MANZENT <- as.character(barrios_censo$MANZENT)
 
 # Joining shapes
 
-lista_sii <- rbind(mz_valdivia.sii,mz_concepcion.sii,mz_copiapo.sii,mz_stgocentro.sii,mz_stgooriente.sii,mz_stgoponiente.sii,mz_stgosur.sii,mz_temuco.sii)
+lista_sii <- rbind(mz_valdivia.sii,mz_concepcion.sii,mz_copiapo.sii,mz_laserena.sii,mz_stgocentro.sii,mz_stgooriente.sii,mz_stgoponiente.sii,mz_stgosur.sii,mz_temuco.sii)
 lista_sii <- spTransform(lista_sii,
                              CRS("+proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"))
 
-rm(list=c("mz_valdivia.sii","mz_concepcion.sii","mz_copiapo.sii","mz_stgocentro.sii","mz_stgooriente.sii","mz_stgoponiente.sii","mz_stgosur.sii","mz_temuco.sii"))
+rm(list=c("mz_valdivia.sii","mz_concepcion.sii","mz_copiapo.sii","mz_laserena.sii","mz_stgocentro.sii","mz_stgooriente.sii","mz_stgoponiente.sii","mz_stgosur.sii","mz_temuco.sii"))
 
 # Creating search tree
 
