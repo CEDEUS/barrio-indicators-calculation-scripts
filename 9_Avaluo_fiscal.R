@@ -72,14 +72,16 @@ sii <- read_delim("Catastro de Bienes Raices 2016-1/BRORGA2441N_00000.txt", deli
 ))
 
 # Converting to numeric
-sii.extended$Avaluofiscaltotal <- as.integer(sii.extended$Avaluofiscaltotal)
+sii$Avaluofiscaltotal <- as.integer(sii$Avaluofiscaltotal)
 
 # Creating manzana id
 
-sii.extended$CMN_MZ <- paste0(as.integer(sii.extended$CodigoSIIdelaComuna),"-",as.integer(sii.extended$NumerodeManzana))
+sii$CMN_MZ <- paste0(as.integer(sii$CodigoSIIdelaComuna),"-",as.integer(sii$NumerodeManzana))
 
 # Median of values by manzana
-median.value.sii <- sii.extended %>% group_by(CMN_MZ) %>% summarise(m=median(Avaluofiscaltotal))
+median.value.sii <- sii %>% 
+  group_by(CMN_MZ) %>%
+  summarise(m=median(Avaluofiscaltotal))
 
 barrios_censo@data$value <- median.value.sii[match(barrios_censo@data$CMN_MZ,median.value.sii$CMN_MZ), ]$m
 
