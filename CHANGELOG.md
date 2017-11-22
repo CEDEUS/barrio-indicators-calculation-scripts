@@ -167,3 +167,16 @@
 - Year of construction by SII manzana calculated using the median added to polygon and visualized using qgis to test
 - Added indicator to the platform, bug fixing on the visualization to show a new categorical legend
 - Added to GIT
+
+## 06/11 - 10/11
+- Added population indicator
+- Added preliminary version of avaluo fiscal indicator
+- Added year of the construction (min and max)
+- Car owners preliminary indicator
+
+## 13/11 - 17/11
+- Added La Serena shapes
+- Progress on avaluo fiscal indicator
+- Finished vehicle indicator
+- Removed unused file
+- Renamed listo to value
