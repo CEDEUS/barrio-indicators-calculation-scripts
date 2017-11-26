@@ -180,3 +180,6 @@
 - Finished vehicle indicator
 - Removed unused file
 - Renamed listo to value
+
+## 20/11 - 24/11
+- Started working on evaluation tool
