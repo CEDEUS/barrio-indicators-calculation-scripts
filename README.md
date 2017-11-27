@@ -1,6 +1,7 @@
 # Sustainability at barrio scale
 
 [![license](https://img.shields.io/github/license/CEDEUS/barrio-indicators-calculation-scripts.svg)]()
+[![license](https://img.shields.io/github/languages/top/CEDEUS/barrio-indicators-calculation-scripts.svg)]()
 
 Welcome to our indicators project! the objetives are:
 
