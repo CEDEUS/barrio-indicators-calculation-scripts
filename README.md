@@ -1,5 +1,7 @@
 # Sustainability at barrio scale
 
+[![license](https://img.shields.io/github/license/CEDEUS/barrio-indicators-calculation-scripts.svg)]()
+
 Welcome to our indicators project! the objetives are:
 
 - Evaluate the possibility of an sustainability measure in different data dimensions.
