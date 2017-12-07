@@ -183,3 +183,15 @@
 
 ## 20/11 - 24/11
 - Started working on evaluation tool
+- Creating one db with all indicators
+
+## 27/12 - 01/12
+- Research on a method to replace gCentroid and deal with irregular shapes: success! now we can use gPointOnSurface
+- Methods for the evaluation tool:
+  - Variable description
+  - Units counter
+
+## 04/12 - 08/12
+- Wireframing of shiny tool
+- Histograms
+- Boxplots
