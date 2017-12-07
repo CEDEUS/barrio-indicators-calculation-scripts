@@ -169,6 +169,7 @@
 - Added to GIT
 
 ## 06/11 - 10/11
+- Added layer control and subsetting by big cities
 - Added population indicator
 - Added preliminary version of avaluo fiscal indicator
 - Added year of the construction (min and max)
