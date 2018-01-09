@@ -187,7 +187,7 @@
 - Creating one db with all indicators
 - Started working on documentation
 
-## 27/12 - 01/12
+## 27/11 - 01/12
 - Research on a method to replace gCentroid and deal with irregular shapes: success! now we can use gPointOnSurface
 - Methods for the evaluation tool:
   - Variable description
@@ -197,3 +197,20 @@
 - Wireframing of shiny tool
 - Histograms
 - Boxplots
+
+## 11/12 - 15/12
+- Written project documentation
+- Uploaded docs to github
+- Significance tests over the data (contexts,barrios and locations)
+- Started working on the evaluation tool
+
+## 11/12 - 15/12
+- Consolidated database of all indicators 
+- Evaluation tool progress: Added to the interface Q-Q, Boxplots, kurtosis, means, medians, standard deviations and unit counter
+
+## 18/12 - 22/12
+- Research and implementation of one variable clustering
+- Descriptive tables for all the barrios
+
+## 25/12 - 29/12
+- Added statistical tests to the ui
